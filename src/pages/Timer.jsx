@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const SESSION_DURATION = 1500; // 25 minutes
+
 export default function Timer() {
-  const [seconds, setSeconds] = useState(10); // change to 1500 later
+  const [seconds, setSeconds] = useState(SESSION_DURATION);
   const [isRunning, setIsRunning] = useState(false);
   const [subject, setSubject] = useState("DSA");
   const [sessions, setSessions] = useState([]);
 
-  // 🔹 Fetch sessions from backend on load
+  // 🔹 Fetch sessions when page loads
   useEffect(() => {
     axios
       .get("http://localhost:5000/api/sessions")
@@ -15,7 +17,7 @@ export default function Timer() {
       .catch((err) => console.error(err));
   }, []);
 
-  // 🔹 Timer logic
+  // 🔹 Timer countdown logic
   useEffect(() => {
     let interval = null;
 
@@ -55,7 +57,7 @@ export default function Timer() {
 
   const resetTimer = () => {
     setIsRunning(false);
-    setSeconds(10); // change back to 1500 later
+    setSeconds(SESSION_DURATION);
   };
 
   return (
