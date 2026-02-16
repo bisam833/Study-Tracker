@@ -1,3 +1,72 @@
+# StudyTracker
+
+StudyTracker is a simple productivity web application built to track focused study sessions and monitor progress across different subjects. The goal of this project is to maintain consistency, visualize study patterns, and improve time management.
+
+---
+
+## About the Project
+
+This project was created to solve a personal problem — tracking actual study time in a structured way. Instead of using third-party productivity apps, I built a custom solution with features tailored to my workflow.
+
+It supports timed sessions, subject-wise tracking, goal monitoring, and session history.
+
+---
+
+## Features
+
+### Authentication
+- Basic login system (demo-based)
+- Protected routes
+- Logout functionality
+
+### Study Timer
+- 25-minute Pomodoro session
+- 45-minute and 60-minute preset options
+- Custom time selection
+- Automatically stores completed sessions
+
+### Dashboard
+- Displays total study hours
+- Weekly goal progress
+- Current study streak
+- Visual progress bar
+
+### Goals
+- Track learning progress in:
+  - DSA
+  - React
+  - DBMS
+  - Operating Systems
+- Progress indicators for each subject
+
+### History
+- Shows previously completed study sessions
+- Displays subject and duration
+- Shows latest 5 sessions
+
+---
+
+## Tech Stack
+
+Frontend:
+- React
+- React Router
+- Tailwind CSS
+- Axios
+- Lucide Icons
+
+Backend:
+- Node.js
+- Express.js
+- MongoDB
+
+---
+
+## Project Structure
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
